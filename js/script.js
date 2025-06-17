@@ -189,6 +189,13 @@ buttonPlay.addEventListener("click", ()=>{
     snake = [inicialPosition]
     })
 
+buttonPlay.addEventListener("touchstart", ()=>{
+    score.innerText = "00"
+    menu.style.display = "none"
+    canvas.style.filter = "none"
+    snake = [inicialPosition]
+    })    
+
     document.addEventListener('touchstart', handleTouchStart, false);
 document.addEventListener('touchmove', handleTouchMove, false);
 
