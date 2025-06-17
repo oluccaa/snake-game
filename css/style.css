@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #191919;
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #ffffff;
+    padding: 1rem;
+    overflow: hidden;
+}
+
+/* ✅ Responsividade no canvas */
+canvas {
+    background-color: #111;
+    width: 100%;
+    max-width: 480px; /* limite para desktop */
+    aspect-ratio: 1 / 1; /* mantém proporção quadrada */
+    height: auto;
+}
+
+/* Responsividade no texto */
+.score {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.score--value {
+    font-weight: 700;
+    font-size: 3rem;
+    display: block;
+    margin-top: -0.8rem;
+}
+
+/* ✅ Centralizado e adaptável */
+.menu-screen {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+    text-align: center;
+    padding: 1rem;
+}
+
+.game-over {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+.final-score {
+    font-weight: 500;
+    font-size: 1.25rem;
+}
+
+.btn-play {
+    border: none;
+    border-radius: 100px;
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+/* ✅ Media query para telas pequenas */
+@media (max-width: 480px) {
+    .score--value {
+        font-size: 2.5rem;
+    }
+
+    .game-over {
+        font-size: 2rem;
+    }
+
+    .final-score {
+        font-size: 1rem;
+    }
+
+    .btn-play {
+        font-size: 0.9rem;
+        padding: 0.5rem 0.9rem;
+    }
+}
