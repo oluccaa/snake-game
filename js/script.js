@@ -226,3 +226,7 @@ function handleTouchMove(evt) {
     xDown = null;
     yDown = null;
 }
+
+window.addEventListener("touchstart", function (e) {
+  e.preventDefault(); // evita rolagem ao tocar
+}, { passive: false });
